@@ -27,7 +27,6 @@ The app keeps your latest 10 calculations so you can refer back anytime.
 You can switch between:
 - **Light Mode**
 - **Dark Mode**
-- **Indian Tricolor Theme 🇮🇳**
 
 ### ✔ Quick GST Rate Buttons
 Instant buttons for common rates:
