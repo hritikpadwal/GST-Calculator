@@ -115,20 +115,11 @@ def inject_theme_css(theme_choice: str):
     .stButton>button { background-color:#1d293b; color:#e6eef8; }
     </style>
     """
-    tricolor_css = """
-    <style>
-    .stApp { background: linear-gradient(180deg, #FF9933 0%, #FFFFFF 50%, #138808 100%); }
-    .card { background: rgba(255,255,255,0.85); }
-    .title { color: #000080; font-weight:800; }
-    </style>
-    """
     # Light theme: keep default, inject base
     if theme_choice == "Light":
         st.markdown(base_css, unsafe_allow_html=True)
     elif theme_choice == "Dark":
         st.markdown(base_css + dark_css, unsafe_allow_html=True)
-    elif theme_choice == "Indian Tricolor":
-        st.markdown(base_css + tricolor_css, unsafe_allow_html=True)
 
 # -----------------------
 # App main layout
@@ -164,7 +155,7 @@ with col2:
             st.button("Download TXT", disabled=True)
 
 with col1:
-    inject_theme_css(st.sidebar.selectbox("Choose Theme", ["Light", "Dark", "Indian Tricolor"], index=0))
+    inject_theme_css(st.sidebar.selectbox("Choose Theme", ["Light", "Dark"], index=0))
 
     st.markdown("<div class='card'>", unsafe_allow_html=True)
 
